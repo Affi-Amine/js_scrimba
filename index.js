@@ -1,10 +1,16 @@
-let essm = "amine"
-let lakab = "affi"
+const player = {
+    essm : 'maynewi jemla',
+    club : 'reak madrid sahby',
+    address : {
+        city : 'madrid',
+    }
+};
 
-//ki yabda star wehd m console ma tgalgsh b syntax l aady
-//snn twally tesstaaml e syntax hedha w t indenti kima theb
-let essmek = `${essm} ${lakab}`
+// we can do the log this way 
+console.log(player.address.city)
+// or we can do it the easier way
+const {name, club, address: {city}} = player;
 
-console.log(essmek)
+console.log(city)
 
-document.getElementById("mathalan").innerText = essmek
+document.querySelector("#mathalan").innerHTML = city
