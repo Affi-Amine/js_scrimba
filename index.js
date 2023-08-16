@@ -1,18 +1,11 @@
-const player = {
-    essm : 'maynewi jemla',
-    club : 'reak madrid sahby',
-    address : {
-        city : 'madrid',
-    }
+//object literals
+
+function adressMaker(city,state){
+    document.querySelector("#mathalan").innerHTML = city
+    /* maaneha mnghyr ma nab9ou naamlou kima l object laady
+    const obj1 = {newcity : city, newState : state}
+    tekfi ki nsamou l object param b nafss l essm ly mn fog
+    */
 };
 
-// we can do the log this way 
-console.log(player.address.city)
-// or we can do it the easier way
-const {name, club, address: {city}} = player;
-
-console.log(city)
-
-document.querySelector("#mathalan").innerHTML = city
-
-// same thing for arrays
+adressMaker("jendouba","tunis lkhadhra")
