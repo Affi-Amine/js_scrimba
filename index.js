@@ -14,3 +14,5 @@ const {name, club, address: {city}} = player;
 console.log(city)
 
 document.querySelector("#mathalan").innerHTML = city
+
+// same thing for arrays
