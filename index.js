@@ -1,11 +1,27 @@
-//object literals
+//spread operator
+//for the lists
 
-function adressMaker(city,state){
-    document.querySelector("#mathalan").innerHTML = city
-    /* maaneha mnghyr ma nab9ou naamlou kima l object laady
-    const obj1 = {newcity : city, newState : state}
-    tekfi ki nsamou l object param b nafss l essm ly mn fog
-    */
-};
+let souhabiii = ["sou", "sou1", "sou2"]
 
-adressMaker("jendouba","tunis lkhadhra")
+// let cloneSouhab = souhabiii : 
+
+//lahna amalt copy aa ref moush aal contenu
+//maaneha kn bsh nbadl haja fy l array lawl bsh tetbadl f theni
+
+let cloneSouhab = [...souhabiii] // lahna amalt clone 
+souhabiii.push("sou555")
+console.log(cloneSouhab) // ma yetbadl feha shay
+
+//for the objects
+
+const sahbi = {
+    essmou : "sou",
+    omrou : 23,
+    wynYosskon : "lbazda city"
+}
+
+const person = {
+    ...sahbi,
+    ayHaja : "blabla"
+    //tnajm tcloni ly fl objet sahbi w tzid alyh attributes
+}
