@@ -1,27 +1,15 @@
-const userData = {
-    name: "amine",
-    age: 20
-  };
-  
-  const returnData = (name) => {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        const user = userData.name;
-        if (user) {
-            //e resolve bsh testaamlha fl .then
-          resolve(userData);
-        } else {
-          reject("user not found");
-        }
-      }, 3000);
-    });
-  };
-  
-  returnData("amine")
-    .then((userData) => {
-      console.log("user data", userData);
+const photos = [];
+
+async function photoUpload() {
+    let uploadStatus = new Promise( (resolve, reject) => {
+        setTimeout( () => {
+            photos.push("Profile Pic");
+            resolve("Photo Uploaded")
+        }, 3000)
     })
-    .catch((error) => {
-      console.log(error);
-    });
-  
+    
+    let result = await uploadStatus;
+    
+    console.log(result);
+    console.log(photos.length);
+}
