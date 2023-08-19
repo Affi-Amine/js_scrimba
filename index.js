@@ -1,15 +1,10 @@
-const photos = [];
+const apiUrl = "https://api.chucknorris.io/jokes/random";
 
-async function photoUpload() {
-    let uploadStatus = new Promise( (resolve, reject) => {
-        setTimeout( () => {
-            photos.push("Profile Pic");
-            resolve("Photo Uploaded")
-        }, 3000)
-    })
+async function getJoke() {
+    const response = await fetch(apiUrl);
+    const data = await response.json();
     
-    let result = await uploadStatus;
-    
-    console.log(result);
-    console.log(photos.length);
+    console.log(data.value);
 }
+
+getJoke();
