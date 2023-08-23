@@ -1,10 +1,7 @@
-const apiUrl = "https://api.chucknorris.io/jokes/random";
-
-async function getJoke() {
-    const response = await fetch(apiUrl);
-    const data = await response.json();
-    
-    console.log(data.value);
-}
-
-getJoke();
+document.querySelector("#get-activity").addEventListener("click", function(){
+    fetch("https://apis.scrimba.com/bored/api/activity")
+        .then(response => response.json())
+        .then(data => {
+            document.querySelector("#activity").textContent = data.activity
+        });  
+})
